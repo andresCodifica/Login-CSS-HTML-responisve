@@ -1,0 +1,150 @@
+	body,html {
+/* Ubicación de la imagen */
+background-image: url(blue.jpg);
+/* Para dejar la imagen de fondo centrada, vertical y
+horizontalmente */
+background-position: center center;
+/* Para que la imagen de fondo no se repita */
+background-repeat: no-repeat;
+/* La imagen se fija en la ventana de visualización para que la altura de la imagen no supere a la del contenido */
+background-attachment: fixed;
+/* La imagen de fondo se reescala automáticamente con el cambio del ancho de ventana del navegador */
+background-size: cover;
+/* Se muestra un color de fondo mientras se está cargando la imagen
+de fondo o si hay problemas para cargarla */
+background-color: #66999;
+/*para el div centrado*/
+/*elimina el magen por defecto del body*/
+margin:0;
+/* tipo de letra*/
+font-family: "Tahoma", Times, serif;
+/*color de la letra*/
+color:#404040;
+/*largo de toda la hoja html*/
+height:100%;
+}
+#padre {
+  /*toma todo el alto de la hoja*/	
+  height: 100%;
+  /*IMPORTANTE*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cuadro{
+  width: 435px;
+  background: white;
+  border: 1px solid #818c94;
+  /*efectos de sombra*/
+  box-shadow: 1px 2px 3px rgba(0,0,0,.55);
+}
+.conten{
+  width: 330px;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  text-align: left;
+
+}
+.logo{
+	width: auto;
+	height: 30px;
+	margin: auto;
+	display: block;
+}
+.logo img{
+	float: left;
+}
+.logo label{
+	padding: 2px;
+	float: left;
+	margin-left: 4px;
+	
+}
+.conten input[type=text]{	
+	width: 100%;
+  	font-size: 16px;
+  	color:#2E2E2E;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #ABB2B9;
+    transition: 0.2s;
+    text-indent:50px 10px 10px 15px;
+  }
+.conten input[type=text]:hover{
+	border-bottom: 1px solid #1C1C1C;
+}
+.conten input[type=text]:focus {
+    border-bottom: 1px solid #0067b8;   
+}
+.conten h2{
+	font-size:1.4em;
+}
+.info{
+	margin-bottom: 20px;
+	margin-top: 20px;
+}
+.info label{
+	font-size:0.8em;
+	margin-right: 10px;
+}
+.info a{
+	color: #0067b8;
+	text-decoration: none;
+}
+.info input[type=submit]{
+	width: 110px;
+	height: 32px;
+	border: none;
+	color: white;
+	background: #0067b8;
+	font-size: 0.9em;
+}
+.boton{
+	text-align: right;
+}
+.footer footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 28px;
+  background-color: rgba(0,0,0,.6);
+  color: white;
+  font-size: 0.8em;
+}
+.footer label{
+	float: right;
+	padding: 8px;
+	margin-right: 12px;
+	font-size: 0.8em;
+}
+@media screen and (max-width:450px), screen and (max-height: 450px){
+	#padre{
+		/*cambio propiedad flex a block para que no quede al centro de la pantalla*/
+		display: block;
+	}
+	.cuadro{
+		box-shadow: none;
+		width:auto;
+		border: none;
+	}
+	body,html{
+		background-image: none;
+		/*el alto de toda la pagina queda automatico*/
+		height: auto;
+	}
+	.footer footer{
+		margin-left: 30px;
+
+		background: white;
+		color:grey;
+		height: auto;
+	}
+	.footer label{
+		float:left;
+	}
+	.conten{
+		width: 90%;
+	}
+}
